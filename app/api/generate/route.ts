@@ -215,8 +215,8 @@ export async function POST(request: NextRequest) {
         width: 2100,
         height: 2800,
         fonts: [
-          { name: 'Fraunces', data: frauncesBoldData!.buffer as ArrayBuffer, weight: 700, style: 'normal' as const },
-          { name: 'DM Sans', data: dmSansRegularData!.buffer as ArrayBuffer, weight: 400, style: 'normal' as const },
+          { name: 'Fraunces', data: new Uint8Array(frauncesBoldData!).buffer, weight: 700, style: 'normal' as const },
+          { name: 'DM Sans', data: new Uint8Array(dmSansRegularData!).buffer, weight: 400, style: 'normal' as const },
         ],
       });
 
